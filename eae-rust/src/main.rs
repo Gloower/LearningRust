@@ -1,15 +1,26 @@
-fn main(){
+fn main() {
 
-    let valor = 300.0;
-    let icms = calcular_icms(valor);
-    escreva_icms(icms);
+    let total_notas = 16;
+
+    let media = calcular_media(total_notas);
+
+    escreva_media(media);
+
 
 }
 
-fn calcular_icms(valor: f32) -> f32{
-    valor * 17.0 / 100.0
+fn calcular_media(total_notas: i32) -> i32 {
+    total_notas / 4
 }
 
-fn escreva_icms(icms: f32) {
-    println!("Icms: {}", icms);
+
+
+fn escreva_media(media:i32) {
+    if  media >= 7 {
+        println!("Aprovado. Sua media foi de: {}", media)
+    }
+
+    else {
+        println!("Reprovado. Sua media foi de: {}", media)
+    }
 }
